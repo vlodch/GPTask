@@ -1,0 +1,136 @@
+I. Acceptance tests
+
+
+1.
+  Feature: Get a report with a base sallary
+
+  Scenario: Verify that Payroll accountant, can get a report of the dates when the salaries need to be paid.
+    Given sallary is equal to the monthly sallary per employee and shown in the report
+    And Sales staff can get a regular monthly fixed base salary in the report.
+    When Base salaries are paid on the last day of the month
+    Then Information should be displayed in the report  
+
+2.
+ Feature: Include bonuses to the report
+
+  Scenario: Verify that that bonuses are included to the report with a base sallary.
+    Given Bonuses are available in the report
+    And Bonuses are paid 15th of every month
+    When The Day is a weekend
+    Then Bonuses is paid in the first Wednesday after the 15th. 
+
+ 3.    
+ Feature: Allow access to the reports for Sales staff
+
+  Scenario: Verify that Sales staff have access to the report
+    Given Report accessable for sales staff
+    And Report contain all the apropriate information by each employee
+    When Function of generate report is called
+    Then Report is shown
+
+
+ 4.    
+ Feature: Data complexity 
+
+  Scenario: Verify that all the data are completely available in the report
+    Given Report contain information regarding sallary of each employee
+    And Data in the report are completely match DataBase information
+    When Report is viewed
+
+ II. 
+Hello "Name",
+
+Could you please specify couple of items regarding User Story "Accountant reports" that is needed to fulfill the testing scenario:
+- What is the platform for described application, should it be Web based application or desctop ?
+- What kind of employee should be included to the report, should it be report for Sales staff only emploees ?
+- Does anyone else should have access to the application beside of Payroll accountant ?
+
+Best Regards,
+Volodya Chukhna
+
+more between 1500 - result of http request is 200 OK but info is not displaying
+
+
+III.
+1) Defect Regarding Web Page in general:
+Summary:
+Network error if searchable text is 10000 characters length in the "Search our website" lookup
+Steps to reproduce:
+1. Open page: http://www.nationalarchives.gov.uk/currency/default0.asp#mid
+2. Enter 10000 characters length text to the field: "Search our website"
+3. Click "Search button"
+
+Actual Result:
+"Browser can't open the page" error message instead of search result
+
+Expected Results:
+1. "Searchable Text not found" error message
+
+
+2) Defect rearding converter itself:
+Severity: High
+
+Attachment of JS injection:
+
+TestData:
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+    alert("I am an alert box!");
+}
+</script>
+
+
+Summary: JavaScript code is executable inside form: "Find out how much yesterday's (1971-2005) money was worth in 2005."  
+Steps to reproduce:
+1. Open page: http://www.nationalarchives.gov.uk/currency/default0.asp#mid
+2. Choose any year (e.g.1975) in the dropdown: "Find out how much yesterday's (1971-2005) money was worth in 2005."
+3. Click "Convert button"
+4. Insert executable JavaScript code from the $TestData section 3 times one after another to the input field "How much would £ from  be worth in 2005's money?" 
+5. Choose year(e.g. 2005)
+6. Click "Convert button"
+Actual Result: JS code from example executable
+Expected result:
+JS code should not be executable in such forms to avoid injections
+
+
+
+
+
+
+
+
+
+
+<button type="button"
+onclick="document.getElementById('test').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="test"></p>
+
+IV.
+
+Exploratary testing notes(positive and negative tests):
+1. Basic functionality of "Old Money" to new calculator were verified, verifyed that money could be converted to the another years currency after entering value to the field and clicking "Convert" button
+2. Verified that year could be chosen
+3. Verified abililty to enter digits to the fields
+4. Verified that button "Convert" return appropriate result on both forms
+5. Verified validation on maximum characters length
+6. Verified that result is  displaying according to the selected year
+7. Verified default values
+8. Verified vulnerablility
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

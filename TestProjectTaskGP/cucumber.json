@@ -1,0 +1,87 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2976898896,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Place bet and assert the odds and returns offered",
+        "description": "",
+        "id": "access-http://sports.williamhill.com/betting/en-gb-website;place-bet-and-assert-the-odds-and-returns-offered",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 226575831,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User open site",
+            "match": {
+              "location": "TestTask.user_open_site()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24327,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User navigate to football event",
+            "match": {
+              "location": "TestTask.user_navigate_to_football_event()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 54092,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User navigate to place bet",
+            "match": {
+              "location": "TestTask.user_navigate_to_place_bet()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "User define bet 0.05",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "User click Place bet button",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Access http://sports.williamhill.com/betting/en-gb website",
+    "description": "Place bet and assert the odds and returns offered",
+    "id": "access-http://sports.williamhill.com/betting/en-gb-website",
+    "keyword": "Feature",
+    "uri": "features/addition.feature"
+  }
+]
